@@ -1,4 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
+import AuthPanel from './AuthPanel';
 import { isSupabaseConfigured } from '../lib/supabase';
 
 interface LayoutProps {
@@ -48,6 +49,7 @@ export default function Layout({ children }: LayoutProps) {
           <strong>Research Dataset DB</strong>
           <small>Netlify + Supabase prototype</small>
         </div>
+        <AuthPanel />
       </aside>
       <main className="main">
         <header className="topbar">
