@@ -90,7 +90,7 @@ export const emptyDatasetInput: DatasetInput = {
 
 export const sourceOptions = ['GEO', 'SRA', 'ArrayExpress', 'TCGA', 'Zenodo', 'Figshare', 'Other'];
 export const organismOptions = ['human', 'mouse', 'rat', 'zebrafish', 'other'];
-export const omicsOptions = ['RNA-seq', 'scRNA-seq', 'ATAC-seq', 'WGS', 'WES', 'proteomics', 'metabolomics', 'multi-omics', 'other'];
+export const omicsOptions = ['RNA-seq', 'scRNA-seq', 'snRNA-seq', 'stRNA-seq', 'ATAC-seq', 'WGS', 'WES', 'proteomics', 'metabolomics', 'multi-omics', 'other'];
 
 export const downloadStatusLabels: Record<DownloadStatus, string> = {
   not_downloaded: '未下载',
