@@ -80,6 +80,7 @@ export default function DatasetDetail() {
           <DetailItem label="组织" value={dataset.tissue} />
           <DetailItem label="细胞类型" value={dataset.cell_type} />
           <DetailItem label="组学类型" value={dataset.omics_type} />
+          <DetailItem label="技术类型" value={dataset.technology_type} />
           <DetailItem label="样本数" value={dataset.sample_count} />
           <DetailItem label="分组" value={dataset.condition_groups} />
         </div>

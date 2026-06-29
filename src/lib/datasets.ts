@@ -25,7 +25,7 @@ function filterLocalDatasets(filters?: DatasetFilters) {
   const keyword = filters?.keyword.trim().toLowerCase();
   if (keyword) {
     datasets = datasets.filter((dataset) =>
-      [dataset.title, dataset.accession, dataset.description, dataset.disease, dataset.tissue, dataset.omics_type, dataset.notes]
+      [dataset.title, dataset.accession, dataset.description, dataset.disease, dataset.tissue, dataset.omics_type, dataset.technology_type, dataset.notes]
         .filter(Boolean)
         .some((value) => String(value).toLowerCase().includes(keyword)),
     );
@@ -48,6 +48,7 @@ function normalizeInput(input: DatasetInput) {
     tissue: input.tissue?.trim() || null,
     cell_type: input.cell_type?.trim() || null,
     omics_type: input.omics_type?.trim() || null,
+    technology_type: input.technology_type?.trim() || null,
     condition_groups: input.condition_groups?.trim() || null,
     data_format: input.data_format?.trim() || null,
     data_size: input.data_size?.trim() || null,
@@ -83,7 +84,7 @@ export async function listDatasets(filters?: DatasetFilters): Promise<Dataset[]>
   if (!keyword) return data ?? [];
 
   return (data ?? []).filter((dataset) =>
-    [dataset.title, dataset.accession, dataset.description, dataset.disease, dataset.tissue, dataset.omics_type, dataset.notes]
+    [dataset.title, dataset.accession, dataset.description, dataset.disease, dataset.tissue, dataset.omics_type, dataset.technology_type, dataset.notes]
       .filter(Boolean)
       .some((value) => String(value).toLowerCase().includes(keyword)),
   );

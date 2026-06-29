@@ -41,7 +41,7 @@ export default function ImportExport() {
         <div className="card">
           <h2>CSV 导入字段建议</h2>
           <p className="muted">建议 CSV 至少包含以下列。正式导入功能应先做字段映射和错误预览。</p>
-          <code className="code-block">title,accession,source,source_url,organism,disease,tissue,omics_type,sample_count,download_status,lifecycle_status,priority,notes</code>
+          <code className="code-block">title,accession,source,source_url,organism,disease,tissue,omics_type,technology_type,sample_count,download_status,lifecycle_status,priority,notes</code>
         </div>
       </div>
     </section>

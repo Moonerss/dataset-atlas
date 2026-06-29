@@ -43,6 +43,7 @@ erDiagram
     text disease
     text tissue
     text omics_type
+    text technology_type
     integer sample_count
     text download_status
     text lifecycle_status
@@ -54,7 +55,6 @@ erDiagram
   }
 
   tags {
-    uuid id PK
     text name
     text color
   }
@@ -99,6 +99,7 @@ erDiagram
 - `tissue`：组织
 - `cell_type`：细胞类型
 - `omics_type`：组学类型
+- `technology_type`：技术类型，可为空
 - `sample_count`：样本数
 - `data_format`：数据格式
 - `download_status`：下载状态
@@ -110,7 +111,6 @@ erDiagram
 约束：
 
 - `title` 和 `source` 必填
-- `accession` 与 `source_url` 至少填写一个
 - `sample_count` 不允许为负数
 
 ### 3.2 `projects`
@@ -182,10 +182,9 @@ erDiagram
 - 来源、物种、疾病、组学类型索引：用于列表筛选
 - 下载状态、生命周期状态、优先级索引：用于状态筛选和看板统计
 - 更新时间倒序索引：用于展示最近更新
-- GIN 全文索引：用于标题、登录号、描述、疾病、组织、组学类型和备注的关键词搜索
+- GIN 全文索引：用于标题、登录号、描述、疾病、组织、组学类型、技术类型和备注的关键词搜索
 
 ## 6. Supabase 协作扩展建议
-
 MVP 阶段可以先关闭登录，使用 service role 或匿名读写策略进行个人使用。正式部署到公网时，不建议长期开放匿名写入。
 
 推荐演进路径：

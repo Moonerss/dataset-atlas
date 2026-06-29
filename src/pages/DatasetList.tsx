@@ -99,7 +99,9 @@ export default function DatasetList() {
                   <th>登录号</th>
                   <th>来源</th>
                   <th>组学</th>
+                  <th>技术类型</th>
                   <th>疾病</th>
+                  <th>物种</th>
                   <th>样本数</th>
                   <th>状态</th>
                   <th>Meta 描述</th>
@@ -118,7 +120,9 @@ export default function DatasetList() {
                       )}
                     </td>
                     <td>{dataset.omics_type || '—'}</td>
+                    <td>{dataset.technology_type || '—'}</td>
                     <td>{dataset.disease || '—'}</td>
+                    <td>{dataset.organism || '—'}</td>
                     <td>{dataset.sample_count ?? '—'}</td>
                     <td><span className={`badge status-${dataset.lifecycle_status}`}>{lifecycleStatusLabels[dataset.lifecycle_status]}</span></td>
                     <td className="meta-cell">{dataset.description || dataset.notes || '—'}</td>

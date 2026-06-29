@@ -125,6 +125,11 @@ export default function DatasetForm({ initialValue = emptyDatasetInput, submitLa
       </label>
 
       <label className="field">
+        <span>技术类型</span>
+        <input value={inputValue(form.technology_type)} onChange={(event) => updateField('technology_type', event.target.value)} placeholder="如 10x Genomics, Smart-seq2, LC-MS/MS" />
+      </label>
+
+      <label className="field">
         <span>疾病 / 表型</span>
         <input value={inputValue(form.disease)} onChange={(event) => updateField('disease', event.target.value)} />
       </label>

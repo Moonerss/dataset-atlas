@@ -20,6 +20,7 @@ function toInput(dataset: Dataset): DatasetInput {
     tissue: dataset.tissue,
     cell_type: dataset.cell_type,
     omics_type: dataset.omics_type,
+    technology_type: dataset.technology_type,
     sample_count: dataset.sample_count,
     condition_groups: dataset.condition_groups,
     data_format: dataset.data_format,

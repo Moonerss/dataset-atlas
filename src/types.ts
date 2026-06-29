@@ -18,6 +18,7 @@ export interface Dataset {
   tissue: string | null;
   cell_type: string | null;
   omics_type: string | null;
+  technology_type: string | null;
   sample_count: number | null;
   condition_groups: string | null;
   data_format: string | null;
@@ -73,6 +74,7 @@ export const emptyDatasetInput: DatasetInput = {
   tissue: '',
   cell_type: '',
   omics_type: '',
+  technology_type: '',
   sample_count: null,
   condition_groups: '',
   data_format: '',

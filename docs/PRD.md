@@ -96,6 +96,7 @@ Dataset Atlas 是一个用于管理科研数据集信息的网页数据库。产
 - 疾病或表型：如 cancer、IBD、COVID-19
 - 组织或细胞类型：如 blood、liver、T cell
 - 组学类型：RNA-seq、scRNA-seq、ATAC-seq、WGS、WES、proteomics、metabolomics 等
+- 技术类型：如 10x Genomics、Smart-seq2、Illumina、LC-MS/MS；没有可留空
 - 样本数：总样本数量
 - 分组信息：case/control、tumor/normal、treatment/control 等
 

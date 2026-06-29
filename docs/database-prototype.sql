@@ -47,6 +47,7 @@ create table if not exists public.datasets (
   tissue text,
   cell_type text,
   omics_type text,
+  technology_type text,
   sample_count integer check (sample_count is null or sample_count >= 0),
   condition_groups text,
   data_format text,
@@ -60,7 +61,6 @@ create table if not exists public.datasets (
   notes text,
   owner_id uuid,
   created_by uuid,
-  updated_by uuid,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
   archived_at timestamptz,
@@ -121,6 +121,7 @@ create index if not exists idx_datasets_text_search on public.datasets using gin
     coalesce(disease, '') || ' ' ||
     coalesce(tissue, '') || ' ' ||
     coalesce(omics_type, '') || ' ' ||
+    coalesce(technology_type, '') || ' ' ||
     coalesce(notes, '')
   )
 );
